@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Album Search</string>
+    <string name="enter_artistname"> Artistname</string>
+    <string name="enter_trackname">" Trackname "</string>
+    <string name="enter_collectionname">" Collectionname(Optional)"</string>
+    <string name="enter_collectionprice">" Collectionprice (Optional)"</string>
+    <string name="enter_releasedate">" Releasedate (Optional)"</string>
+    <string name="search">Search</string>
+    <string name="album_cart">Album Cart</string>
+    <string name="sort_option">Sort By</string>
+    <string name="enter_artistName">Enter Artist Name</string>
+    <string name="enter_trackName">Enter TrackName</string>
+    <string name="searchall">Search All</string>
+    <string name="or">OR</string>
+</resources>

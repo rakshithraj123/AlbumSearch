@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mainClickListener"
+            type="com.app.albumsearch.ui.MainClickListener" />
+
+        <variable
+            name="artistName"
+            type="String" />
+
+        <variable
+            name="trackName"
+            type="String" />
+
+        <variable
+            name="collectioName"
+            type="String" />
+
+        <variable
+            name="collectionPrice"
+            type="String" />
+
+        <variable
+            name="releasedate"
+            type="String" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/ten">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/hundred"
+                android:background="@drawable/rounded_corner"
+                android:hint="@string/enter_artistname"
+                android:padding="@dimen/five"
+                android:text="@={artistName}" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/rounded_corner"
+                android:hint="@string/enter_trackname"
+                android:padding="@dimen/five"
+                android:text="@={trackName}" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/rounded_corner"
+                android:hint="@string/enter_collectionname"
+                android:padding="@dimen/five"
+                android:text="@={collectioName}" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/rounded_corner"
+                android:hint="@string/enter_collectionprice"
+                android:padding="@dimen/five"
+                android:text="@={collectionPrice}" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/rounded_corner"
+                android:hint="@string/enter_releasedate"
+                android:padding="@dimen/five"
+                android:text="@={releasedate}" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/twenty"
+                android:onClick="@{(v)->mainClickListener.onSearch(artistName,trackName,collectioName,collectionPrice,releasedate)}"
+                android:text="@string/search" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/twenty"
+                android:text="@string/or"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/twenty"
+                android:onClick="@{(v)->mainClickListener.onSearchAll()}"
+                android:text="@string/searchall" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+</layout>
